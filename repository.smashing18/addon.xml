@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.smashing18" name="my smashing repo v18" version="0.0.1" provider-name="Me">
+<addon id="repository.smashing18" name="my smashing repo v18" version="0.0.2" provider-name="Me">
 	<extension point="xbmc.addon.repository" name="my smashing repo">
 		<dir minversion="17.9.0">
 		<info compressed="false">https://raw.githubusercontent.com/monthou66/repository.smashing18/master/zips/addons.xml</info>
