@@ -31,21 +31,6 @@
 	</extension>
 </addon>
 
-<addon id="repository.smashing18" name="my smashing repo v18" version="0.0.2" provider-name="Me">
-	<extension point="xbmc.addon.repository" name="my smashing repo">
-		<dir minversion="17.9.0">
-		<info compressed="false">https://raw.githubusercontent.com/monthou66/repository.smashing18/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/monthou66/repository.smashing18/master/zips/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/monthou66/repository.smashing18/master/zips/</datadir>
-		</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">smashing for v18 on</summary>
-		<description lang="en">really smashing</description>
-		<genre>uk</genre>
-	</extension>
-</addon>
-
 <addon id="script.me.getsettings"
     name="getsettings"
     version="1.0.0"
