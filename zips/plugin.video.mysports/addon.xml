@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.mysports"
+       name="My Sports"
+       version="0.0.12"
+       provider-name="Me and HD Streaming">
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">HD Streaming</summary>
+    <description lang="en">HD Streaming video plugin</description>
+    <platform>all</platform>
+    <license>GPL 2.0</license>
+  </extension>
+  </addon>

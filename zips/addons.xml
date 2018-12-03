@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.mysports"
+       name="My Sports"
+       version="0.0.12"
+       provider-name="Me and HD Streaming">
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">HD Streaming</summary>
+    <description lang="en">HD Streaming video plugin</description>
+    <platform>all</platform>
+    <license>GPL 2.0</license>
+  </extension>
+  </addon>
+
 <addon id="repository.smashing" name="my smashing repo" version="0.0.1" provider-name="Me">
 	<extension point="xbmc.addon.repository" name="my smashing repo">
 		<dir>
@@ -13,6 +29,20 @@
 		<description lang="en">really smashing</description>
 		<genre>uk</genre>
 	</extension>
+</addon>
+
+<addon id="script.me.getsettings"
+    name="getsettings"
+    version="1.0.0"
+    provider-name="trogggy">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">get settingsfrom script.me.testsettings.</summary>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="script.me.smashingsync"
