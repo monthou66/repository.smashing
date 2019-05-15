@@ -46,6 +46,18 @@
 	</extension>
 </addon>
 
+<addon id="resource.images.skinbackgrounds.xonfluence" name="Skin Backgrounds - Xonfluence" version="0.0.1" provider-name="Helly">
+	<extension point="kodi.resource.images" compile="false" type="skinbackgrounds" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Backgrounds Pack - Xonfluence Design</summary>
+		<description lang="en">Skin Backgrounds Pack - Xonfluence Design</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
 <addon id="script.me.getsettings"
     name="getsettings"
     version="1.0.0"
@@ -95,5 +107,47 @@
         <email/>
         <source>https://github.com/manacker/service.subtitles.subscene</source>
     </extension>
+</addon>
+
+<addon
+  id="skin.xonfluence"
+  version="4.0.10"
+  name="Xonfluence"
+  provider-name="Helly, messed with by me">
+  <requires>
+    <import addon="xbmc.gui" version="5.14.0"/>
+	  <import addon="script.favourites" version="7.1.1"/>
+	  <import addon="service.skin.widgets" version="0.0.33"/>
+	  <import addon="service.library.data.provider" version="0.3.2"/>
+	  <import addon="script.randomandlastitems" version="2.2.2"/>
+	  <import addon="resource.images.skinbackgrounds.xonfluence" version="1.0.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    debugging="false"
+    effectslowdown="1.0">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Xonfluence hacked about a bit.</summary>
+    <description lang="en">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
+    <disclaimer lang="en">You break it - You get to keep the pieces</disclaimer>
+    <platform>all</platform>
+	  <license>GNU General Public License version 2</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+	    <screenshot>resources/screenshot-01.jpg</screenshot>
+	    <screenshot>resources/screenshot-02.jpg</screenshot>
+	    <screenshot>resources/screenshot-03.jpg</screenshot>
+	    <screenshot>resources/screenshot-04.jpg</screenshot>
+	    <screenshot>resources/screenshot-05.jpg</screenshot>
+	    <screenshot>resources/screenshot-06.jpg</screenshot>
+	    <screenshot>resources/screenshot-07.jpg</screenshot>
+	    <screenshot>resources/screenshot-08.jpg</screenshot>
+	    <screenshot>resources/screenshot-09.jpg</screenshot>
+    </assets>
+    <news>See changelog for latest changes</news>
+  </extension>
 </addon>
 </addons>

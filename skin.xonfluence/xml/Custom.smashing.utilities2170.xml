@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Custom.smashing.utilities2170.xml for conf1080 -->
+<window type="dialog" id="2170">	<!--  -->
+	<defaultcontrol always="true">450</defaultcontrol>
+		<onload>XBMC.Action(FirstPage)</onload><!-- <onload>SetFocus(450,0)</onload><!-- jump to the top of the list - alternative is <onclick>SetFocus(0)</onclick> as first action -->
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<depth>DepthSideBlade</depth>
+			<animation effect="slide" start="600,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="600,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<left>500r</left>		<!-- was 600r -->
+				<top>0</top>
+				<width>630</width>
+				<height>1080</height>    <!--Background colour - shorten and bottom becomes transparent  -->
+				<texture border="22,0,0,0" flipx="true">smashingHomeBladeSub.png</texture>
+			</control>
+			<control type="image">
+				<left>425r</left>		<!-- was 555r -->
+				<top>0</top>			<!-- default 45 - lost mouse button -->
+				<width>300</width>
+				<height>250</height>	<!-- default 300 -->
+				<aspectratio align="center">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>special://masterprofile/smashing/smashingfavourites/icons/utilities.png</texture>		<!-- put icon here --> <!--  <texture>$INFO[Container(450).ListItem.Icon]</texture> if separate icons -->
+				<bordertexture border="12">smashingThumbShadow.png</bordertexture>
+				<bordersize>12</bordersize>
+			</control>
+			<control type="list" id="450">
+				<left>485r</left>	<!-- was 585r -->
+				<top>250</top>		<!-- Default 375 - reduce and list moves up-->
+				<width>575</width>	<!-- was 675 -->
+				<height>700</height>	<!-- Default is 570 - reduce and  see less entries, increase see more-->
+				<onup>450</onup>
+				<onleft>Dialog.Close(2170)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<pagecontrol></pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="60">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<texture border="8">smashingbutton-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>525</width>
+						<height>60</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="4">smashingbutton-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="4">smashingbutton-focus.png</texture>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>525</width>
+						<height>60</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>Previous Menu</label>
+                        <onclick>RunScript(special://userdata/smashing/smashingfavourites/scripts/automatedscripts/opendialog.py, back)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="2">
+						<label>Choose More</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://userdata/smashing/smashingfavourites/scripts/automatedscripts/opendialog.py, 2154)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="3">
+						<label>Enable addons</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableaddons.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="4">
+						<label>Enable an addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="5">
+						<label>Disable an addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="6">
+						<label>Disable a user addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, user)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="7">
+						<label>Enable a pvr addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, pvr)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="8">
+						<label>Disable a pvr addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, pvr)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="9">
+						<label>Force enable a pvr addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, pvr, force)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="10">
+						<label>Force disable a pvr addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, pvr, force)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="11">
+						<label>Enable all pvr addons</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, pvr, all)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="12">
+						<label>Disable all pvr addons</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, pvr, all)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="13">
+						<label>Enable radio addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, force, plugin.audio.radio_de)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="14">
+						<label>Disable radio addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, force, plugin.audio.radio_de)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="15">
+						<label>Enable a service addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, service)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="16">
+						<label>Disable a service addon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, service)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="17">
+						<label>Test disable except pvr, service, conf, radio</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, exclude, conf, service, pvr, repo)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="18">
+						<label>Test enable if include pvr, service, conf, radio</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, enable, include, conf, service, pvr, repo)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="19">
+						<label>Test choose user-installed skinto disable</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, disable, include, skin, user)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="20">
+						<label>Test remove an addon folder</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/enableanaddon.py, deleteaddonfolder, forceuserfalseifwindows)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="21">
+						<label>Update local addons</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/updatelocaladdons.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="22">
+						<label>Update repositories</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/updaterepos.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="23">
+						<label>reload keymaps</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/keymaps/reloadkeymaps.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="24">
+						<label>update pvr.iptvsimplefab</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/clonepvr.iptvsimple.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="25">
+						<label>testdeleteoldclone</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/testdeleteoldclone.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="26">
+						<label>testgetaddonversion</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/testgetaddonversion.py, pvr.iptvsimple, pvr.iptvsimplefab)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="27">
+						<label>testcloneaddon</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/smashingcloneaddon.py, pvr.iptvsimple, pvr.iptvsimplefab, PVR IPTV Simple Client fab)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="28">
+						<label>testclonepvr.iptvsimple - force</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/smashingcloneaddon.py, pvr.iptvsimple, pvr.iptvsimplefab, PVR IPTV Simple Client fab, force)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="29">
+						<label>testclonexonfluence - force</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/smashingcloneaddon.py, skin.xonfluence, skin.xonfluencemess, xonfluence mess, force)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="30">
+						<label>testclonechoose</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/smashingcloneaddon.py, choose)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="31">
+						<label>Cache all artwork</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/texturecache/shell.py,./texturecache.py,c)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="32">
+						<label>Mount flash read only</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/shell/startshell.py, makeflashro)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="33">
+						<label>Mount flash read write</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/shell/startshell.py, makeflashrw)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="34">
+						<label>Check window and focus</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/checkwindowandfocus.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="35">
+						<label>Step back to home</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/backtohome.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="36">
+						<label>Step back to home v2</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/backtohome2.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="37">
+						<label>Set port</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/setport.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="38">
+						<label>Last played local</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="39">
+						<label>Last played central</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py,central)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="40">
+						<label>Last played local music</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py,music)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="41">
+						<label>Last played local video</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py,video)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="42">
+						<label>Last played central music from start</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py,central,music,start)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="43">
+						<label>Last played central video</label>
+                        <onclick>Dialog.Close(2170)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/utilityscripts/resumelastplayed.py,central,video)</onclick>
+                        <visible>true</visible>
+					</item>
+				</content>
+			</control>
+			<control type="label">
+				<description>Page label</description>
+				<right>45</right>
+				<top>1005</top>
+				<width>525</width>
+				<height>45</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+	            <label>[COLOR white]$INFO[Container(450).NumItems] items   -   Page $INFO[Container(450).CurrentPage] of $INFO[Container(450).NumPages]  [/COLOR]</label>
+			</control>    <!--  -->
+		</control>
+	</controls>
+</window>

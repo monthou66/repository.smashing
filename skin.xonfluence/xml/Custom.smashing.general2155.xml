@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Custom.smashing.general2155.xml for conf1080 -->
+<window type="dialog" id="2155">	<!--  -->
+	<defaultcontrol always="true">450</defaultcontrol>
+		<onload>XBMC.Action(FirstPage)</onload><!-- <onload>SetFocus(450,0)</onload><!-- jump to the top of the list - alternative is <onclick>SetFocus(0)</onclick> as first action -->
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<depth>DepthSideBlade</depth>
+			<animation effect="slide" start="600,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="600,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<left>500r</left>		<!-- was 600r -->
+				<top>0</top>
+				<width>630</width>
+				<height>1080</height>    <!--Background colour - shorten and bottom becomes transparent  -->
+				<texture border="22,0,0,0" flipx="true">smashingHomeBladeSub.png</texture>
+			</control>
+			<control type="image">
+				<left>425r</left>		<!-- was 555r -->
+				<top>0</top>			<!-- default 45 - lost mouse button -->
+				<width>300</width>
+				<height>250</height>	<!-- default 300 -->
+				<aspectratio align="center">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture>special://masterprofile/smashing/smashingfavourites/icons/general.png</texture>		<!-- put icon here --> <!--  <texture>$INFO[Container(450).ListItem.Icon]</texture> if separate icons -->
+				<bordertexture border="12">smashingThumbShadow.png</bordertexture>
+				<bordersize>12</bordersize>
+			</control>
+			<control type="list" id="450">
+				<left>485r</left>	<!-- was 585r -->
+				<top>250</top>		<!-- Default 375 - reduce and list moves up-->
+				<width>575</width>	<!-- was 675 -->
+				<height>700</height>	<!-- Default is 570 - reduce and  see less entries, increase see more-->
+				<onup>450</onup>
+				<onleft>Dialog.Close(2155)</onleft>
+				<onright>450</onright>
+				<ondown>450</ondown>
+				<pagecontrol></pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="60">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<texture border="8">smashingbutton-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>525</width>
+						<height>60</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<visible>!Control.HasFocus(450)</visible>
+						<texture border="4">smashingbutton-nofocus.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>555</width>
+						<height>60</height>
+						<visible>Control.HasFocus(450)</visible>
+						<texture border="4">smashingbutton-focus.png</texture>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>0</top>
+						<width>525</width>
+						<height>60</height>
+						<font>font12_title</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>Previous Menu</label>
+                        <onclick>RunScript(special://userdata/smashing/smashingfavourites/scripts/automatedscripts/opendialog.py, back)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="2">
+						<label>Choose More</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(special://userdata/smashing/smashingfavourites/scripts/automatedscripts/opendialog.py, 2154)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="3">
+						<label>Favourites</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(Favourites)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="4">
+						<label>Music</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="5">
+						<label>Music - Artists</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/Artists/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="6">
+						<label>Music - Christmas</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/Christmas/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="7">
+						<label>Music - Compilations</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/Compilations/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="8">
+						<label>Music - OSTs</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/OSTs/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="9">
+						<label>Music - Singles</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"smb://Source Music/Singles/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="10">
+						<label>My Radio Stations</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10502,"plugin://plugin.audio.radio_de/stations/my/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="11">
+						<label>MySports 1 - Sky Sports News</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel1%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+1+-+Sky+Sports+News&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="12">
+						<label>MySports 2 - Sky Sports 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel2%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+2+-+Sky+Sports+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="13">
+						<label>MySports 3 - Sky Sports 2</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel3%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+3+-+Sky+Sports+2&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="14">
+						<label>MySports 4 - Sky  Sports 3</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel4%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+4+-+Sky++Sports+3&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="15">
+						<label>MySports 5 - Sky Sports 4</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel5%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+5+-+Sky+Sports+4&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="16">
+						<label>MySports 6 - Sky Sports 5</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel6%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+6+-+Sky+Sports+5&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="17">
+						<label>MySports 7 - Sky Sports F1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel7%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+7+-+Sky+Sports+F1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="18">
+						<label>MySports 8 - BT Sport 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel8%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+8+-+BT+Sport+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="19">
+						<label>MySports 9 - BT Sport 2</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel9%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel9+-+BT+Sport+2&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="20">
+						<label>MySports 10 - BT Sport Europe</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel10%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+10+-+BT+Sport+Europe&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="21">
+						<label>MySports 11 - BT Sport ESPN</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel11%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+11+-+BT+Sport+ESPN&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="22">
+						<label>MySports 12 - Setanta Sports 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel12%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+12+-+Setanta+Sports+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="23">
+						<label>MySports 13 - Setanta Sports Ireland</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel13%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+13+-+Setanta+Sports+Ireland&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="24">
+						<label>MySports 14 - Box Nation</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel14%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+14+-+Box+Nation&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="25">
+						<label>MySports 15 - Racing UK</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel15%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+15+-+Racing+UK&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="26">
+						<label>MySports 1 (SD) - Sky Sports News</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel1-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+1+%28SD%29+-+Sky+Sports+News&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="27">
+						<label>MySports 2 (SD) - SSky Sports 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel2-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+2+%28SD%29+-+SSky+Sports+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="28">
+						<label>MySports 3 (SD) - Sky Sports 2</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel3-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+3+%28SD%29+-+Sky+Sports+2&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="29">
+						<label>MySports 4 (SD) - Sky  Sports 3</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel4-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+4+%28SD%29+-+Sky++Sports+3&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="30">
+						<label>MySports 5 (SD) - Sky Sports 4</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel5-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+5+%28SD%29+-+Sky+Sports+4&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="31">
+						<label>MySports 6 (SD) - Sky Sports 5</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel6-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+6+%28SD%29+-+Sky+Sports+5&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="32">
+						<label>MySports 7 (SD) - Sky Sports F1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel7-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+7+%28SD%29+-+Sky+Sports+F1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="33">
+						<label>MySports 8 (SD) - BT Sport 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel8-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+8+%28SD%29+-+BT+Sport+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="34">
+						<label>MySports 9 (SD) - BT Sport 2</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel9-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+9+%28SD%29+-+BT+Sport+2&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="35">
+						<label>MySports 10 (SD) - BT Sport Europe</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel10-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+10+%28SD%29+-+BT+Sport+Europe&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="36">
+						<label>MySports 11 (SD) - BT Sport ESPN</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel11-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+11+%28SD%29+-+BT+Sport+ESPN&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="37">
+						<label>MySports 12 (SD) - Setanta Sports 1</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel12-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+12+%28SD%29+-+Setanta+Sports+1&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="38">
+						<label>MySports 13 (SD) - Setanta Sports Ireland</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel13-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+13+%28SD%29+-+Setanta+Sports+Ireland&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="39">
+						<label>MySports 14 (SD) - Box Nation</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel14-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+14+%28SD%29+-+Box+Nation&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="40">
+						<label>MySports 15 (SD) - Racing UK</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.mysports/?url=rtmp%3A%2F%2Fvdn.hd-streaming.tv%3A443%2Flive+playpath%3Dchannel15-sd%3Fs%3D6hfu0+app%3Dlive+live%3Dtrue&mode=30&name=Channel+15+%28SD%29+-+Racing+UK&sf_options=winID%3D10001%26_options_sf")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="41">
+						<label>PVR recordings Aspire</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10025,"smb://Source DVB Video/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="42">
+						<label>Google Photos</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10002,"smb://Source Google Photos/",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="43">
+						<label>restartkodi</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.restartkodi)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="44">
+						<label>restarttoandroid</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.restarttoandroid)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="45">
+						<label>powerofftoandroid</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.powerofftoandroid)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="46">
+						<label>Audio0 Toggle</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.audio.profiles,0)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="47">
+						<label>Audio1 HDMITV</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.audio.profiles,1)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="48">
+						<label>Audio2 Bluetooth</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.audio.profiles,2)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="49">
+						<label>Audio3 HDMIAmp</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(script.audio.profiles,3)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="50">
+						<label>Switch Audio</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(/storage/.config/audioscripts/switchaudiotoggle.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="51">
+						<label>Switch Bluetooth</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(/storage/.config/audioscripts/switchaudiobluetooth.py)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="52">
+						<label>LibreELEC Configuration</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(service.libreelec.settings")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="53">
+						<label>Guide Sky</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/tvscripts/startpvr.py,pvr.dvbviewer,Sky,channels)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="54">
+						<label>DVBViewer Sport</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>RunScript(special://masterprofile/smashing/smashingfavourites/scripts/tvscripts/startpvr.py,pvr.dvbviewer,sport,channels)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="55">
+						<label>Fab IPTV Catchup</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10025,"plugin://plugin.video.fabhosting/?action=TheDev&extra&page&plot&thumbnail=E%3a%5cXBMC%20Stuff%5ckryptonmess%5cportable_data%5caddons%5cplugin.video.fabhosting%5cresources%5cart%5cvod.png&title=Fab%20IPTV%20Catchup&url",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="56">
+						<label>alphabet</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10001,"plugin://plugin.program.super.favourites/?fanart=E%3a%5cXBMC%20Stuff%5ckryptonmess%5cportable_data%5caddons%5cplugin.program.super.favourites%5cfanart.jpg&image=E%3a%5cXBMC%20Stuff%5ckryptonmess%5cportable_data%5caddons%5cplugin.program.super.favourites%5cicon.png&label=alphabet&mode=400&path=special%3a%2f%2fprofile%2faddon_data%2fplugin.program.super.favourites%2fSuper%20Favourites%5calphabet",return)</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="57">
+						<label>[COLOR white]Sky Sports Main Event HD  [/COLOR]Sky Sports Today</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Main+Event+HD++%5B%2FCOLOR%5DSky+Sports+Today&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F9329.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_main.png&plot=Now%3A+%5B11%3A00%5D+Sky+Sports+Today%0ANext%3A+%5B12%3A00%5D+Sky+Sports+Today%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="58">
+						<label>[COLOR white]Sky Sports Cricket HD  [/COLOR]Live T20 Blast</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Cricket+HD++%5B%2FCOLOR%5DLive+T20+Blast&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F9330.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_cricket.png&plot=Now%3A+%5B17%3A00%5D+Live+T20+Blast%0ANext%3A+%5B22%3A30%5D+T20+Blast%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="59">
+						<label>[COLOR white]Sky Sports Action HD  [/COLOR]Mayweather/McGregor: Fight Capital</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Action+HD++%5B%2FCOLOR%5DMayweather%2FMcGregor%3A+Fight+Capital&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F9331.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_action.png&plot=Now%3A+%5B11%3A30%5D+Mayweather%2FMcGregor%3A+Fight+Capital%0ANext%3A+%5B12%3A00%5D+Fight+Night%3A+Golovkin+v+Brook%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="60">
+						<label>[COLOR white]Sky Sports F1 HD  [/COLOR]The Home of Formula One</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+F1+HD++%5B%2FCOLOR%5DThe+Home+of+Formula+One&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F1345.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_f1.png&plot=Now%3A+%5B11%3A00%5D+The+Home+of+Formula+One%0ANext%3A+%5B12%3A00%5D+The+Home+of+Formula+One%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="61">
+						<label>[COLOR white]Sky Sports Mix HD  [/COLOR]NFL - America&apos;s Game</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Mix+HD++%5B%2FCOLOR%5DNFL+-+America%27s+Game&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F1786.ts&thumbnail=http%3A%2F%2Fstatic.trustedreviews.com%2F94%2F00003824b%2F9dba%2Fsky-sports-mix.jpg&plot=Now%3A+%5B11%3A00%5D+NFL+-+America%27s+Game%0ANext%3A+%5B12%3A00%5D+Michael+Atherton%3ASporting+Triumphs%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="62">
+						<label>[COLOR white]Sky Sports News HD  [/COLOR]Sky Sports Today</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+News+HD++%5B%2FCOLOR%5DSky+Sports+Today&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F1285.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Flogos%2FSky_Sport_News_HD.png&plot=Now%3A+%5B11%3A00%5D+Sky+Sports+Today%0ANext%3A+%5B12%3A00%5D+Sky+Sports+Today%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="63">
+						<label>[COLOR white]Sky Sports Arena HD  [/COLOR]Super League Highlights</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Arena+HD++%5B%2FCOLOR%5DSuper+League+Highlights&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F23611.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_arena.png&plot=Now%3A+%5B11%3A30%5D+Super+League+Highlights%0ANext%3A+%5B11%3A45%5D+Super+League+Highlights%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="64">
+						<label>[COLOR white]Sky Sports Football HD  [/COLOR]EFL Greatest:QPR/Middlesbrough &apos;16</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&title=%5BCOLOR+white%5DSky+Sports+Football+HD++%5B%2FCOLOR%5DEFL+Greatest%3AQPR%2FMiddlesbrough+%2716&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F23613.ts&thumbnail=http%3A%2F%2Ffabiptv.com%2Fgetlogos%2Fnewlogos%2Fss_fb.png&plot=Now%3A+%5B11%3A30%5D+EFL+Greatest%3AQPR%2FMiddlesbrough+%2716%0ANext%3A+%5B11%3A45%5D+EFL+Greatest%3AN.Forest%2FYeovil+2007%0A&extra=&page=")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="65">
+						<label>Sky Sports F1 HD</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>PlayMedia("plugin://plugin.video.fabhosting/?action=run_cronjob&url=http%3A%2F%2Fmeowyapmeow.com%3A8080%2Flive%2Foqrfxtzg%2Fm7q38iA3wE%2F1345.ts&amp")</onclick>
+                        <visible>true</visible>
+					</item>
+					<item id="66">
+						<label>HQ Sports</label>
+                        <onclick>Dialog.Close(2155)</onclick>
+                        <onclick>ActivateWindow(10025,"plugin://HQ/?category=Sports&foldername=Sports&mode=live_tv",return)</onclick>
+                        <visible>true</visible>
+					</item>
+				</content>
+			</control>
+			<control type="label">
+				<description>Page label</description>
+				<right>45</right>
+				<top>1005</top>
+				<width>525</width>
+				<height>45</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+	            <label>[COLOR white]$INFO[Container(450).NumItems] items   -   Page $INFO[Container(450).CurrentPage] of $INFO[Container(450).NumPages]  [/COLOR]</label>
+			</control>    <!--  -->
+		</control>
+	</controls>
+</window>
