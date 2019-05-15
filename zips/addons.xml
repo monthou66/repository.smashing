@@ -120,7 +120,6 @@
 	  <import addon="service.skin.widgets" version="0.0.33"/>
 	  <import addon="service.library.data.provider" version="0.3.2"/>
 	  <import addon="script.randomandlastitems" version="2.2.2"/>
-	  <import addon="resource.images.skinbackgrounds.xonfluence" version="1.0.0"/>
   </requires>
   <extension
     point="xbmc.gui.skin"
