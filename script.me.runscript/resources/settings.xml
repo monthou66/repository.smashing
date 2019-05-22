@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>   <!-- -->
+    <setting label="30100" id="scriptfolder.default" type="bool" default="true"/> <!-- Use default scripts folder -->
+    <setting label="30105"  type="action" action="" enable="eq(-1,true)" subsetting="true"/> <!-- special://masterprofile/scripts -->
+    <setting type="sep"/>
+    <setting label="30101" id="scriptfolder.custom"  visible="eq(-3,false)" type="enum" lvalues="30111|30112" default = "30112"/> <!-- Use custom scripts folder -->
+    <setting label="30112" id="scriptfolder.browse" visible="eq(-1,0)+eq(-4,false)" type="folder" source = "" option="writeable" default="special://masterprofile"/> <!--  folder location (browse to folder inside kodi) -->
+    <setting label="30113" id="scriptfolder.enter" visible="eq(-2,1)+eq(-5,false)" type="text" default="special://masterprofile"/> <!-- folder location (enter text) -->
+    <setting label="300010"  type="action" action=""/> <!-- space -->
+    <setting label="30120" id="args.enabled" type="bool" default="true"/> <!-- Enable arguments if supported -->
+    <setting label="300010"  type="action" action=""/> <!-- space -->
+    <setting label="30140" id="debug.enabled" type="bool" default="true"/> <!-- Debugging -->
+</settings>
