@@ -82,7 +82,7 @@ def scanfailed():
     xbmc.executebuiltin('Notification(Script folder unavailable, Switching to userdata)')
     SCRIPTFOLDER = USERDATA
     try:
-        contents = os.listdir(USERDATA)
+        contents = sorted(os.listdir(USERDATA))                 # use sorted() to get list in alphabetical order
         folders, files = xbmcvfs.listdir(USERDATA)
     except:
         message = ("Problem listing contents of scripts folder: %s"% SCRIPTFOLDER)
@@ -118,7 +118,7 @@ def listthings():
     SCRIPTS = []
     folders = []
     try:
-        contents = os.listdir(SCRIPTFOLDER)
+        contents = sorted(os.listdir(SCRIPTFOLDER))                 # use sorted() to get list in alphabetical order
     except:
         scanfailed()
     # list scripts
@@ -133,6 +133,13 @@ def listthings():
         else:
             folders.append(next)
         c = c + 1
+        
+        # sort scripts and folders alphabetically
+        # works for python2 only
+        # https://stackoverflow.com/questions/10269701/case-insensitive-list-sorting-without-lowercasing-the-result
+        SCRIPTS = sorted(SCRIPTS, key=lambda s: s.lower())
+        folders = sorted(folders, key=lambda s: s.lower())
+        
     size = len(SCRIPTS)
     if size == 0:
         header = 'No scripts here.  Select a folder'
