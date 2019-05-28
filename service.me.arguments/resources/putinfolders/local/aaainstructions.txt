@@ -1,0 +1,5 @@
+This is the local folder for service.me.arguments.
+Any text file that doesn't start 'aaa' will be read, moved to the working folder, renamed and run.
+Anything starting 'aaa' will be ignored.
+Anything that isn't a text file will be ignored.
+A timestamp will also be added, which will allow older files to be cleared.

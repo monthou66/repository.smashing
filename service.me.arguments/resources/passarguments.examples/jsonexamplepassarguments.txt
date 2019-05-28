@@ -1,0 +1,6 @@
+json
+{ "jsonrpc": "2.0", "method": "Application.GetProperties", "params": {"properties": ["version", "name"]}, "id": 1 }
+start
+"major":
+finish
+,"minor"

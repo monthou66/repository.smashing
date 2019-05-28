@@ -1,0 +1,31 @@
+Tab 1:
+Monitor Settings
+Use default folder - yes/no
+if no:
+    use custom folder:
+        browse to (in kodi folder)
+        or
+        browse to (outside kodi)
+        or
+        enter folder
+Filename (default monitorfile.txt)
+Frequency (default 10s)
+        
+Tab 2:
+Use central marker      
+Enable central marker file - yes/no
+If yes:
+    Central marker location - browse / enter
+    Timeout (default 30min?)
+    Action on timeout:   proceed / cancel
+    
+
+    
+                
+Tab 3:
+Debug
+Addon logging, default normal
+Use addon-specific log
+Notifications
+restart addon
+If central file times out: notification / dialog / log only

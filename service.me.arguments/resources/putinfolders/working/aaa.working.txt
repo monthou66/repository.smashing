@@ -1,0 +1,3 @@
+This is the working folder for service.me.arguments.
+Files to run are copied or moved into here.
+The timestamp allows files to be run with a delay, and to check files are being processed successfully.

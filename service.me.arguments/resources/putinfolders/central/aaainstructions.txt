@@ -1,0 +1,11 @@
+This is the central folder for service.me.arguments.
+Any text file that doesn't start 'aaa' will be read, copied, renamed and run.
+Anything starting 'aaa' will be ignored.
+Anything that isn't a text file will be ignored.
+
+If the phrase 'nodelay' is in the file name it will be run immediately on being read.
+If not the reading machine may add a delay before action.
+This is to avoid eg simultaneous library updates.
+
+When a file is processed it will be renamed and the name of the processing machine will be added.  
+A timestamp will also be added, which will allow older files to be cleared.

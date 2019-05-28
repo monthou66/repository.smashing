@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>   <!-- -->
+  <category label="30001"> <!-- Monitor Settings -->
+    <setting label="30100" id="monitor.default" type="bool" default="true"/> <!-- Use default folder -->
+    <setting label="30105"  type="action" action="" enable="eq(-1,true)" subsetting="true"/> <!-- special://masterprofile/addon_data/service.me.arguments -->
+    <setting type="sep"/>
+    <setting label="30101" id="monitor.custom"  visible="eq(-3,false)" type="enum" lvalues="30111|30112|30113" default = "30113"/> <!-- Use custom folder -->
+    <setting label="30111" id="monitor.browselocal" visible="eq(-1,0)+eq(-4,false)" type="folder" source = "" option="writeable" default="special://masterprofile/addon_data/service.me.arguments"/> <!-- Monitor folder location (browse to folder inside kodi) -->
+    <setting label="30112" id="monitor.browse" visible="eq(-2,1)+eq(-5,false)" type="folder" source = "" option="writeable" default=""/> <!-- Monitor folder location (browse to folder outside kodi) -->
+    <setting label="30113" id="monitor.enter" visible="eq(-3,2)+eq(-6,false)" type="text" default="special://masterprofile/addon_data/service.me.arguments"/> <!-- Monitor folder location (enter text) -->
+    <setting type="sep"  visible="eq(-7,false)"/>
+    <setting label="300010"  type="action" action=""/> <!-- space -->
+    <setting label="30106"  type="action" action=""/> <!-- Place 'passarguments.txt' file in folder -->
+    <setting label="300010"  type="action" action=""/> <!-- space -->
+    <setting type="sep"/>
+    <setting label="30103" id="check.frequency" type="number" default="10"/> <!-- Check frequency -->
+  </category>
+    <category label="30002"> <!-- Central Settings -->
+    <setting label="30120" id="central.marker" type="bool" default="false"/> <!-- Enable central monitor file -->
+    <setting label="30100" id="central.default"  visible="eq(-1,true)" type="bool" default="true"/> <!-- Use default folder -->
+    <setting label="30130" id="central.method"  visible="eq(-2,true)+eq(-1,false)" type="enum" lvalues="30131|30132" default = "30131"/> <!-- Central marker location -->
+    <setting label="30131" id="central.browse" visible="eq(-3,true)+eq(-2,false)+eq(-1,0)" type="folder" source = "" option="writeable"/> <!-- Browse to marker folder -->
+    <setting label="30132" id="central.enter" visible="eq(-4,true)+eq(-3,false)+eq(-2,1)" type="text"/> <!-- Enter marker folder -->
+    <setting label="30133" id="central.delay"  visible="eq(-5,true)" type="number" default="10"/> <!-- Time before action if delay specified(minutes)) -->    
+  </category>
+    <category label="30003"> <!-- Script folder -->
+    <setting label="30160" id="script.folder" type="bool" default="false"/> <!-- Enable script folder -->
+    <setting label="30100" id="scriptfolder.default" visible="eq(-1,true)" type="bool" default="true"/> <!-- Use default folder -->
+    <setting label="30162"  type="action" action="" visible="eq(-2,true)" enable="eq(-1,true)" subsetting="true"/> <!-- special://masterprofile/scripts -->
+    <setting type="sep"/>
+    <setting label="30161" id="scriptfolder.method"  visible="eq(-4,true)+eq(-3,false)" type="enum" lvalues="30163|30164" default = "30163"/> <!-- script folder location -->
+    <setting label="30163" id="scriptfolder.browse" visible="eq(-5,true)+eq(-4,false)+eq(-1,0)" type="folder" source = "" option="writeable" default="special://masterprofile"/> <!-- Browse to script folder (from userdata) -->
+    <setting label="30164" id="scriptfolder.enter" visible="eq(-6,true)+eq(-5,false)+eq(-2,1)" type="text"/> <!-- Enter script folder -->
+  </category>
+    <category label="30009"> <!-- Debug -->
+    <setting label="30140" id="log.level" type="enum" lvalues="30141|30142|30143" default = "1"/> <!-- Addon logging, default normal -->
+    <setting label="30144" id="addon.log" type="bool" default="false"/> <!-- Use addon-specific log -->
+    <setting label="30145" id="notify.action" type="bool" default="true"/> <!-- Notifications -->
+    <setting label="30150" id="restart.addon" type="bool" default="false"/> <!-- restart -->
+    <setting label="30151" id="stop.addon" type="bool" default="false"/> <!-- Stop addon for this session -->
+    <setting label="30152" id="clear.addonlogs" type="bool" default="false"/> <!-- clear addonlogs -->
+  </category>
+</settings>

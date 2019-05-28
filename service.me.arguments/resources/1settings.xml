@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>   <!-- -->
+  <category label="30001"> <!-- Monitor Settings -->
+    <setting label="30100" id="monitor.default" type="bool" default="true"/> <!-- Use default folder -->
+    <setting label="30105"  type="action" action="" enable="eq(-1,true)" subsetting="true"/> <!-- special://masterprofile/addon_data/service.me.arguments -->
+    <setting type="sep"/>
+    <setting label="30101" id="monitor.custom"  enable="eq(-3,false)" type="enum" lvalues="30111|30112|30113" default = "30113"/> <!-- Use custom folder -->
+    <setting label="30111" id="monitor.browselocal" visible="eq(-1,0)+eq(-4,false)" type="folder" source = "" option="writeable" default="special://masterprofile/addon_data/service.me.arguments"/> <!-- Monitor folder location (browse to folder inside kodi) -->
+    <setting label="30112" id="monitor.browse" visible="eq(-2,1)+eq(-5,false)" type="folder" source = "" option="writeable" default=""/> <!-- Monitor folder location (browse to folder outside kodi) -->
+    <setting label="30113" id="monitor.enter" visible="eq(-3,2)+eq(-6,false)" type="text" default="special://masterprofile/addon_data/service.me.arguments"/> <!-- Monitor folder location (enter text) -->
+    <setting label="30102" id="monitor.filename" type="text" default = "passarguments.txt"/> <!-- Monitor file name -->
+    <setting label="30103" id="check.frequency" type="number" default="10"/> <!-- Check frequency -->
+  </category>
+    <category label="30002"> <!-- Marker Settings -->
+    <setting label="30120" id="central.marker" type="bool" default="false"/> <!-- Enable central marker file -->
+    <setting label="30130" id="marker.method"  visible="eq(-1,true)" type="enum" lvalues="30131|30132" default = "30131"/> <!-- Central marker location -->
+    <setting label="30131" id="marker.browse" visible="eq(-2,true)+eq(-1,0)" type="folder" source = "" option="writeable"/> <!-- Browse to marker folder -->
+    <setting label="30132" id="marker.enter" visible="eq(-3,true)+eq(-2,1)" type="text"/> <!-- Enter marker folder -->
+    <setting label="30133" id="marker.timeout"  visible="eq(-4,true)" type="number" default="10"/> <!-- Timeout (minutes) -->    
+    <setting label="30121" id="timeout.action"  visible="eq(-5,true)" type="enum" lvalues="30122|30123" default = "30123"/> <!-- Action on marker timeout -->
+    <setting label="30124" id="timeout.message"  visible="eq(-6,true)+eq(-1,0)" type="enum" lvalues="30125|30126|30127" default = "30126"/> <!-- Message on marker timeout -->
+  </category>
+    <category label="30003"> <!-- Debug -->
+    <setting label="30140" id="log.level" type="enum" lvalues="30141|30142|30143" default = "1"/> <!-- Addon logging, default normal -->
+    <setting label="30144" id="addon.log" type="bool" default="false"/> <!-- Use addon-specific log -->
+    <setting label="30145" id="notify.action" type="bool" default="true"/> <!-- Notifications -->
+    <setting label="30150" id="restart.addon" type="bool" default="false"/> <!-- restart -->
+    <setting label="30151" id="stop.addon" type="bool" default="false"/> <!-- Stop addon for this session -->
+    <setting label="30152" id="clear.addonlogs" type="bool" default="false"/> <!-- clear addonlogs -->
+  </category>
+</settings>

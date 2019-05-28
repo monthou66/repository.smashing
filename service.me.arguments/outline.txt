@@ -1,0 +1,60 @@
+
+
+
+get settings
+set frequency for central check (in terms of frequency for local)
+
+if local folder is not default
+                check local folder
+                if default (instructions) files not there copy them in - do this at the settings stage!
+                move contents to working folder
+if count has reached limit
+                reset count
+                check central folder
+                if default (instructions) files not there copy them in
+                copy contents to working folder
+                rename files in central folder
+check working folder for files to process
+                if time delay specified (ie from central)
+                        check if time reached
+                                    if yes process
+                                        if not local or nodelay in filename delete marker
+                                    if not note in marker file number of times accessed
+                                    if this reaches a set figure send dialog to check manually
+                                    if folder is empty delete marker file
+Process files:
+                read contents
+                move file to archive (unless number to archive = 0)
+                delete marker if folder npow empty
+                check number of files in archive - delete oldest if required (new setting!)
+                do whatever
+                
+                
+                
+                
+                
+working on:
+
+put instructions in set folders
+Need to go in:
+centralfolder
+workingfolder
+localfolder
+
+Put in addon resources folder
+log locations of folders in text file, check on startup that they've been cleaned.
+If folder gone or instructions gone remove fronm log
+If not, log / notify / dialog / auto-clean?  
+
+checkdefaultfiles() 
+
+
+add option to delete folder in addon_data
+
+
+
+
+existing = os.listdir(foldertocheck)
+
+if not centralfolder in folders:
+501
