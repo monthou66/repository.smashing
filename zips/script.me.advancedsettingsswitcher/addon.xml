@@ -2,7 +2,7 @@
 <addon id="script.me.advancedsettingsswitcher"
        name="My Advanced settings switcher"
        version="0.0.1"
-       provider-name="me"
+       provider-name="me">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>
