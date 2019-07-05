@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.me.advancedsettingsswitcher"
        name="My Advanced settings switcher"
-       version="0.0.1"
+       version="0.0.2"
        provider-name="me">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
@@ -10,6 +10,6 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary>swap advanced settings</summary>
-    <description>Make an advancedsettings folder in the root of userdata.  Any .xml files placed in that folder can be renamed to advancedsettings.xml and will be applied (if valid!) on a restart </description>
+    <description>Load default options or files saved to addon data.  Any .xml files placed in either folder can be renamed to advancedsettings.xml and will be applied (if valid!) on a restart </description>
   </extension>
 </addon>

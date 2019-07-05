@@ -1,0 +1,183 @@
+<advancedsettings>
+        <locale>
+            <country>UK (12h)</country>
+            <language>English</language>
+            <timezone>Europe/London</timezone>
+            <timezonecountry>Britain (UK)</timezonecountry>
+        </locale>
+        <lookandfeel>
+            <enablerssfeeds>false</enablerssfeeds>
+        </lookandfeel>
+		<pathsubstitution>
+			<substitute>
+			<from>smb://Source Cartoons</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/Cartoons</to>
+			</substitute>		
+			<substitute>
+			<from>smb://Source Films</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Video/Films</to>
+			</substitute>			
+			<substitute>
+			<from>smb://Source Home videos</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Video/Home videos</to>
+			</substitute>	
+			<substitute>
+			<from>smb://Source Music Videos</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Video/Music Videos</to>
+			</substitute>
+			<substitute>
+			<from>smb://Source Science and Nature</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/Science and Nature</to>
+			</substitute>			
+			<substitute>
+			<from>smb://Source Sport</from>
+			<to>smb://192.168.1.25/wd6tb/Video/Sport</to>
+			</substitute>			
+			<substitute>
+			<from>smb://SourceTV1series</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/TV1 - series</to>
+			</substitute>
+			<substitute>
+			<from>smb://SourceTV2completedseries</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/TV2 -  completed series</to>
+			</substitute>			
+			<substitute>
+			<from>smb://SourceTV3sharedseries</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/TV3 - shared series</to>
+			</substitute>
+			<substitute>
+			<from>smb://SourceTV4completedsharedseries</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/TV4 - completed shared series</to>
+			</substitute>			
+			<substitute>
+			<from>smb://SourceTV5seriesLiam</from>
+			<to>smb://192.168.1.25/wd6tb/Video/TV/TV5 - series Liam</to>
+			</substitute>					
+			<substitute>
+			<from>smb://Source DVB Video</from>
+			<to>smb://Aspire/BigEdge2/DVB Video/</to>
+			</substitute>	
+			<substitute>
+			<from>smb://Source Music</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Music</to>
+			</substitute>
+			<substitute>
+			<from>smb://Source Audio</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Audio</to>
+			</substitute>
+			<substitute>
+			<from>smb://Source oddsandendsone</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Video/oddsandends</to>
+		    </substitute>
+			<substitute>
+			<from>smb://Source oddsandendstwo</from>
+			<to>smb://192.168.1.25/wd6tb/Video/oddsandends</to>
+		    </substitute>
+			<substitute>
+			<from>smb://Source oddsandendsthree</from>
+			<to>smb://192.168.1.25/Toshiba5TB/Video/empty</to>
+		    </substitute>
+			<substitute>
+			<from>smb://Source oddsandendsfour</from>
+			<to>smb://192.168.1.25/wd6tb/Video/empty</to>
+		    </substitute>			
+            <substitute>
+            <from>special://masterprofile/playlists/</from>
+            <to>special://masterprofile/smashing/smashingfavourites/pathsubs/userdata/playlists/</to>
+            </substitute>
+            <substitute>
+            <from>special://masterprofile/library</from>
+            <to>special://masterprofile/smashing/smashingfavourites/pathsubs/userdata/library</to>
+            </substitute>
+            <substitute>
+            <from>special://masterprofile/keymaps</from>
+            <to>special://masterprofile/smashing/smashingfavourites/pathsubs/userdata/keymaps</to>
+            </substitute>
+            <substitute>
+            <from>smb://Source smashing</from>
+            <to>smb://192.168.1.1/fat/smashing</to>
+            </substitute>
+            <substitute>
+            <from>smb://Source Install Folder</from>
+            <to>smb://192.168.1.1/fat/smashing/smashinginstall</to>
+            </substitute>
+	        <substitute>
+            <from>smb://Source smashingartwork</from>
+            <to>smb://192.168.1.1/fat/smashing/artwork</to>
+            </substitute>
+	        <substitute>
+            <from>smb://Source GooglePhotos</from>
+            <to>smb://192.168.1.25/Stuff/Google Drive/Google Photos</to>
+            </substitute>
+            <substitute>
+            <from>smb://SourceTVRecordings</from>
+            <to>smb://192.168.1.25/Stuff/DVB Video</to>
+            </substitute>
+	        <substitute>
+            <from>smb://SourceTVTimeshift</from>
+            <to>smb://192.168.1.25/Stuff/DVB Timeshift</to>
+            </substitute>
+		</pathsubstitution>	      
+        <subtitles>
+            <languages default="true">English</languages>
+            <movie default="true">false</movie>
+            <tv default="true">false</tv>
+        </subtitles>
+        <video>
+          <excludefromscan>
+            <regexp>Extras</regexp>
+            <regexp>Extras2</regexp>
+          </excludefromscan>
+          <excludetvshowsfromscan>
+           <regexp>Extras</regexp>
+            <regexp>Extras2</regexp>
+          </excludetvshowsfromscan>
+        </video>
+        <videolibrary>
+            <actorthumbs>true</actorthumbs>
+            <backgroundupdate>false</backgroundupdate>
+            <flattentvshows>1</flattentvshows>
+            <groupmoviesets>true</groupmoviesets>
+            <seasonthumbs>true</seasonthumbs>
+            <showunwatchedplots>true</showunwatchedplots>
+        </videolibrary>
+		<videodatabase>
+		  <type>mysql</type>
+		  <host>192.168.1.25</host>
+		  <port>3306</port>
+		  <user>kodi</user>
+		  <pass>kodi</pass>
+		  <name>kodi</name>
+		</videodatabase> 
+        <debug>
+            <screenshotpath>special://masterprofile/smashing/smashingfavourites/miscfiles/screenshots</screenshotpath>
+        </debug>
+		<loglevel>1</loglevel>
+</advancedsettings>		
+        <cache>
+            <buffermode>1</buffermode>
+            <memorysize>0</memorysize>
+            <readfactor>30</readfactor>
+        </cache>
+		<loglevel>1</loglevel>
+
+		<videodatabase>
+		  <type>mysql</type>
+		  <host>192.168.1.25</host>
+		  <port>3306</port>
+		  <user>kodi</user>
+		  <pass>kodi</pass>
+		  <name>kodi</name>
+		</videodatabase>  
+        
+        <pvrpowermanagement>
+            <enabled default="true">true</enabled>
+            <prewakeup default="true">5</prewakeup>
+            <setwakeupcmd default="true">RunScript(&quot;script.advanced.wol&quot;,,,my-server@90:FB:A6:E4:BF:BC)</setwakeupcmd>
+        </pvrpowermanagement>
+        
+        <cache>
+            <buffermode>1</buffermode>
+            <memorysize>139460608</memorysize>
+            <readfactor>30</readfactor>
+        </cache>        

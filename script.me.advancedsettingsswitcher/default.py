@@ -8,13 +8,17 @@ import shutil
 
 ADDON = xbmcaddon.Addon()
 ADDON_ID = ADDON.getAddonInfo('id')
+ADDON_DIR = xbmc.translatePath(ADDON.getAddonInfo('path'))
+defaultoptionsfolder = os.path.join(ADDON_DIR, "resources", "default_options")
+localoptionsfolder = xbmc.translatePath(ADDON.getAddonInfo('profile'))
 USERDATA = xbmc.translatePath('special://masterprofile')
-advsetts = os.path.join(USERDATA, "advancedsettings")
+# advsetts = os.path.join(USERDATA, "advancedsettings")
 output = os.path.join(USERDATA, "advancedsettings.xml")
-previous = os.path.join(advsetts, "previousadvancedsettings.xml")
+# previous = os.path.join(advsetts, "previousadvancedsettings.xml")
+previous = os.path.join(localoptionsfolder, "previousadvancedsettings.xml")
 
 def nofilesfound():
-    xbmc.log("%s: no .xml files found in %s folder"% (ADDON_ID, advsetts), 2)
+    xbmc.log("%s: no .xml files found in %s or %s"% (ADDON_ID, defaultoptionsfolder, localoptionsfolder), 2)
     xbmc.executebuiltin('Notification(No files found, check log)')
     exit()
 
@@ -46,12 +50,16 @@ def archive():
         exit()
                 
 xbmc.log("%s: starting"% ADDON_ID, 2)
-if not os.path.isdir(advsetts):
-    nofilesfound()  
-# list available .xml files    
+if not os.path.isdir(localoptionsfolder):
+    os.mkdir(localoptionsfolder)
+# check for files 
 allfiles = []
 xmlfiles = []
-allfiles = os.listdir(advsetts)
+defaultfiles = []
+localfiles = []
+defaultfiles = os.listdir(defaultoptionsfolder)
+localfiles = os.listdir(localoptionsfolder)
+allfiles = defaultfiles + localfiles
 num = len(allfiles)
 c = 0
 while c < num:
@@ -64,12 +72,14 @@ if size < 1:
     nofilesfound()
 # select new advancedsettings file    
 CHOOSE = xbmcgui.Dialog().select("Advanced Settings - Options", xmlfiles)
-CHOICE = xmlfiles[CHOOSE]
-source = os.path.join(advsetts, CHOICE)
 xbmc.log("%s: CHOOSE is %s"% (ADDON_ID, CHOOSE), 2)
-xbmc.log("%s: CHOICE is %s"% (ADDON_ID, CHOICE), 2)
 if CHOOSE == -1:
-    cancel()    
+    cancel()  
+CHOICE = xmlfiles[CHOOSE]
+source = os.path.join(defaultfiles, CHOICE)
+if not os.path.isfile(source):
+    source = os.path.join(localfiles, CHOICE)
+xbmc.log("%s: CHOICE is %s"% (ADDON_ID, CHOICE), 2)
 xbmc.log("%s: source is %s"% (ADDON_ID, source), 2)
 # tidy up
 if os.path.exists(output):
