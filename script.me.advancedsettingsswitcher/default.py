@@ -50,6 +50,9 @@ def archive():
         exit()
                 
 xbmc.log("%s: starting"% ADDON_ID, 2)
+
+xbmc.log("%s: localoptionsfolder is: %s"% (ADDON_ID, localoptionsfolder), 2)
+
 if not os.path.isdir(localoptionsfolder):
     os.mkdir(localoptionsfolder)
 # check for files 
@@ -76,9 +79,9 @@ xbmc.log("%s: CHOOSE is %s"% (ADDON_ID, CHOOSE), 2)
 if CHOOSE == -1:
     cancel()  
 CHOICE = xmlfiles[CHOOSE]
-source = os.path.join(defaultfiles, CHOICE)
+source = os.path.join(defaultoptionsfolder, CHOICE)
 if not os.path.isfile(source):
-    source = os.path.join(localfiles, CHOICE)
+    source = os.path.join(localoptionsfolder, CHOICE)
 xbmc.log("%s: CHOICE is %s"% (ADDON_ID, CHOICE), 2)
 xbmc.log("%s: source is %s"% (ADDON_ID, source), 2)
 # tidy up
