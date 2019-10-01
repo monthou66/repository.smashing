@@ -62,8 +62,8 @@
                     <onclick>PreviousMenu</onclick>
                     <include>DialogCloseButton</include>
                     <onleft>2</onleft>
-                    <onright>11</onright> <!-- point to last menu entry -->
-                    <onup>11</onup> <!-- point to last menu entry -->
+                    <onright>10</onright> <!-- point to last menu entry -->
+                    <onup>10</onup> <!-- point to last menu entry -->
                     <ondown>2</ondown>
                 </control>
             </control>
@@ -142,7 +142,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="400">
 					<description>Skin Settings button</description>
@@ -175,7 +175,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="500">
 					<description>Skin change button</description>
@@ -208,7 +208,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="600">
 					<description>Skin reload button</description>
@@ -241,7 +241,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="700">
 					<description>Keymaps reload button</description>
@@ -274,7 +274,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="800">
 					<description>reset PVR button</description>
@@ -307,7 +307,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="900">
 					<description>Add custom skin dialogs button</description>
@@ -340,7 +340,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="1000">
 					<description>Open custom skin dialogs button</description>

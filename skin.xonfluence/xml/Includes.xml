@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- new line 27 to add view-->
+<?xml version="1.0" encoding="UTF-8"?><!-- new line 27 to add view-->  <!-- new section added around line 1659 to add host label-->
 <includes>
     <include file="IncludesHomeWidget.xml" />
     <include file="Defaults.xml" />
@@ -1656,6 +1656,21 @@
             <visible>!Skin.HasSetting(HideSystemTime)</visible>
         </control>
     </include>
+    <include name="Name">					<!-- new -->
+        <control type="label" id="1">
+            <description>Host label</description>
+            <right>30</right>
+            <top>72</top>
+            <width>1000</width>
+            <height>45</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font14</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[System.FriendlyName]</label>
+        </control>
+    </include>  
     <include name="CDArtSpinner">
         <animation effect="slide" start="0,0" end="105,0" time="1200" delay="500" condition="Player.Playing | Player.Forwarding | Player.Rewinding">Conditional</animation>
         <animation effect="rotate" end="-360" center="auto" time="2400" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>

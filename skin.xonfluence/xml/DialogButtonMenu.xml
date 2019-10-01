@@ -466,7 +466,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="1400">
 					<description>Reboot from Nand button</description>
@@ -500,7 +500,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="1500">
 					<description>Restart button</description>
@@ -533,7 +533,7 @@
 					<top>0</top>
 					<width>510</width>
 					<height>60</height>
-					<texture border="25,5,25,5">DialogContextMiddle.png</texture>
+					<texture border="25,5,25,5">$VAR[DialogPath]DialogContextMiddle.png</texture>
 				</control>
 				<control type="button" id="1600">
 					<description>Button to open second menu</description>

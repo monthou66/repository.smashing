@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>      <!-- new line 1193 to add system name -->
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
@@ -1190,6 +1190,7 @@
             <depth>DepthHeader</depth>
             <include>Clock</include>
             <include>Date</include>
+            <include>Name</include>					<!-- new -->
         </control>
     </controls>
 </window>

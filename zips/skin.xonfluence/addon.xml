@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.xonfluence"
-  version="4.0.10"
+  version="14.0.10"
   name="Xonfluence"
   provider-name="Helly, messed with by me">
   <requires>
@@ -18,7 +18,7 @@
     <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Xonfluence hacked about a bit.</summary>
+    <summary lang="en">Xonfluence hacked about a bit. - based on 4.0.10</summary>
     <description lang="en">Xonfluence is a MOD of Confluence to enable a greater degree of user customisation to the default skin (based by Mudislander's CCM).</description>
     <disclaimer lang="en">You break it - You get to keep the pieces</disclaimer>
     <platform>all</platform>
