@@ -1670,6 +1670,21 @@
             <shadowcolor>black</shadowcolor>
             <label>$INFO[System.FriendlyName]</label>
         </control>
+    </include>      
+    <include name="PVRstatus">					<!-- new -->
+        <control type="label" id="1">
+            <description>PVR status label</description>
+            <right>30</right>
+            <top>106</top>
+            <width>1000</width>
+            <height>45</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>TV on</label>
+        </control>
     </include>  
     <include name="CDArtSpinner">
         <animation effect="slide" start="0,0" end="105,0" time="1200" delay="500" condition="Player.Playing | Player.Forwarding | Player.Rewinding">Conditional</animation>

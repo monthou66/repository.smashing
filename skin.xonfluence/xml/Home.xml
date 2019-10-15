@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>      <!-- new line 1193 to add system name -->
+<?xml version="1.0" encoding="UTF-8"?>      <!-- new control 1148ish to add smashingfavourites button -->    <!-- new lines at btm to add system name and PVR status -->
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
@@ -1144,7 +1144,26 @@
                 <onclick>$VAR[FavBtnCommand]</onclick>
                 <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
                 <visible>!Skin.HasSetting(HideFavorites)</visible>
-            </control>
+            </control>            
+            <control type="radiobutton" id="51">                                                    <!-- new control-->
+                <description>Smashing push button</description>
+                <textureradioonfocus>icon_smashing.png</textureradioonfocus>
+                <textureradioonnofocus>icon_smashing.png</textureradioonnofocus>
+                <textureradioofffocus>icon_smashing.png</textureradioofffocus>
+                <textureradiooffnofocus>icon_smashing.png</textureradiooffnofocus>
+                <texturefocus border="5" colordiffuse="$VAR[MainColorOne]">floor_buttonFO.png</texturefocus>
+                <texturenofocus border="5">floor_button.png</texturenofocus>
+                <width>68</width>
+                <height>68</height>
+                <radiowidth>52</radiowidth>
+                <radioheight>52</radioheight>
+                <radioposx>8</radioposx>
+                <radioposy>8</radioposy>
+                <label></label>
+                <font></font>
+                <onclick>RunScript(special://userdata/smashing/smashingfavourites/scripts/automatedscripts/opendialog.py, back)</onclick>
+                <include condition="!String.IsEmpty(Skin.String(HomeTrans))">HomeTransparentEffect</include>
+            </control>                                                                              <!-- end new control-->
             <control type="radiobutton" id="25">
                 <description>GlobSearch push button</description>
                 <textureradioonfocus>icon_search.png</textureradioonfocus>
@@ -1191,6 +1210,7 @@
             <include>Clock</include>
             <include>Date</include>
             <include>Name</include>					<!-- new -->
+            <include>PVRstatus</include>			<!-- new -->
         </control>
     </controls>
 </window>
